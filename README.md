@@ -40,3 +40,33 @@ _**This app was created only for the purpose of the test assignment and code qua
 ## Get started
 
 Use this repository as your starting point, but **DO NOT** fork it. Create a public repository on GitHub for your application source code, push it and send the link to us.
+
+
+composer install
+npm install
+cp .env.example .env # change DB credentials
+php artisan key:generate
+npm run dev # or npm run prod
+php artisan migrate --seed
+php artisan serve
+
+
+# to run the tests
+./vendor/bin/phpunit
+
+
+# User stories
+
+1. At the start each company has a wallet with 20 coins of credit
+2. Contacting a candidate will cost the company 5 coins
+3. when a company contacts a candidate, we should send an email
+4. when a company contacts a candidate, charge the company 5 coins from its wallet
+5. When a company hires a candidate, we should mark the candidate as hired
+6. When a company hires a candidate, put back 5 coins in the wallet of the company
+7. When a company hires a candidate, send an email to the candidate to tell them they were hired
+8. A company can hire only candidates that they have contacted before
+// do we need to check if the conmpany has balance or not?
+
+E2E tests
+1. On the candidates' list there is a button Contact
+2. the button Hire is where a company can hire a candidate
