@@ -44,7 +44,7 @@ Use this repository as your starting point, but **DO NOT** fork it. Create a pub
 
 composer install
 npm install
-cp .env.example .env # change DB credentials
+cp .env.example .env # change DB and mail credentials,
 php artisan key:generate
 npm run dev # or npm run prod
 php artisan migrate --seed
