@@ -22,8 +22,8 @@ class Company extends Model
             $company->createWalletWithDefaultValue();
         });
     }
-    
 
+    
     public function wallet()
     {
         return $this->hasOne(Wallet::class);
