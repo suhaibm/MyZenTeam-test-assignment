@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Candidate;
 use App\Models\Company;
 
@@ -13,12 +14,16 @@ class CandidateController extends Controller
     return view('candidates.index', compact('candidates', 'coins'));
 }
 
-    public function contact(){
-        // @todo
-        // Your code goes here...
+    public function contact(Request $request)
+    {
+        $candidate = Candidate::find($request->candidate_id);
+
+        $company = Company::find(1);
+        $company->contactCandidate($candidate);
     }
 
-    public function hire(){
+    public function hire()
+    {
         // @todo
         // Your code goes here...
     }

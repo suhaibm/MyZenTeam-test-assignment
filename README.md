@@ -65,8 +65,10 @@ php artisan serve
 6. When a company hires a candidate, put back 5 coins in the wallet of the company
 7. When a company hires a candidate, send an email to the candidate to tell them they were hired
 8. A company can hire only candidates that they have contacted before
-// do we need to check if the conmpany has balance or not?
-
+// check if the company has balance or not when contacting a candidate?
+// a candidate can be hired by only one company
+// test an email is sent to the candidate upon contact
+// a candidate is contacted only once
 E2E tests
 1. On the candidates' list there is a button Contact
 2. the button Hire is where a company can hire a candidate

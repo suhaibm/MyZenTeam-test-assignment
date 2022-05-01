@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         Candidate::factory(3)->create();
         Company::factory(1)->create();
-        Wallet::factory(1)->create();
+        // Wallet::factory(1)->create(); // because the company already creates a wallet with it
     }
 }
