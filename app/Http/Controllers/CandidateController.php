@@ -13,13 +13,13 @@ class CandidateController extends Controller
         $company = Company::find(1);
         $coins = $company->coins;
         $contactedCandidatesIdsArray = $company->getContactedCandidatesIdsArray();
-        $companyHiredCandidatesIds = $company->candidates()->where('status', 'HIRED')->get()->pluck('id');
+        $companyHiredCandidatesIdsArray = $company->getHiredCandidatesIdsArray();
 
         return view('candidates.index', [
             'candidates' => $candidates, 
             'coins' => $coins, 
             'companyContactedCandidatesIds' => $contactedCandidatesIdsArray,
-            'companyHiredCandidatesIds' => $companyHiredCandidatesIds->toArray()
+            'companyHiredCandidatesIds' => $companyHiredCandidatesIdsArray
         ]);
     }
 
